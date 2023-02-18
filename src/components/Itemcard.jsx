@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Itemcard() {
 return (
   <>
-    <Card className="h-100" style={{border: "5px solid black"}}>
+    <Card className="h-100" >
       <Card.Img
         variant="top"
         height="200px"
