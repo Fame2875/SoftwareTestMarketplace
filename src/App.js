@@ -3,6 +3,7 @@ import NewsContainer from "./NewsContainer";
 import { fetchNews, findNews } from "./api";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Itemcard from "./components/Itemcard"
 
 function App() {
   const [news, setNews] = React.useState(null);
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+      <Itemcard/>
       {/* <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-4">
           <div className="space-x-2 pt-8">
