@@ -38,7 +38,7 @@ return (
               onChange={(e) => {
                 //   setId(e.target.value)
               }}
-              className="bg-white   outline-none  text-gray-900 text-sm rounded-lg  w-full pl-10 p-2.5  "
+              className="bg-white   outline-none  text-gray-900 text-sm rounded-lg  w-full pl-10 p-4  "
               placeholder="Search"
               required
             />

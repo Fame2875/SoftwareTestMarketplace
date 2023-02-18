@@ -3,31 +3,27 @@ import NewsContainer from "./NewsContainer";
 import { fetchNews, findNews } from "./api";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Item from "./components/Item";
+import Item from "../src/Page/item/Item";
+import Login from "../src/Page/Login/Login";
 import { Link, Route, Routes, Navigate } from 'react-router-dom'
-
+import { BrowserRouter as Router } from 'react-router-dom'
 function App() {
-  const [news, setNews] = React.useState(null);
-  let [search, setSearch] = React.useState("");
-  React.useEffect(() => {
-    fetchNews(setNews);
-  }, []);
-  const handleChange = (event) => {
-    setSearch(event.target.value);
-  };
-  function onSearch() {
-    setNews(null);
-    findNews(search, setNews);
-  }
 
   return (
+     <Router>
+
     <div>
       <div className="w-screen h-screen">
         <Navbar />
-        <Item />
-
+        <Routes>
+          <Route path="/item" element={<Item />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Navigate to="/item" />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
       </div>
     </div>
+     </Router>
   )
 }
 
