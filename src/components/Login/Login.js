@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./style.css";
 
-function App() {
+function Login() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -12,17 +12,17 @@ function App() {
   const database = [
     {
       username: "user1",
-      password: "pass1"
+      password: "pass1",
     },
     {
       username: "user2",
-      password: "pass2"
-    }
+      password: "pass2",
+    },
   ];
 
   const errors = {
     uname: "invalid username",
-    pass: "invalid password"
+    pass: "invalid password",
   };
 
   const handleSubmit = (event) => {
@@ -51,7 +51,7 @@ function App() {
   // Generate JSX code for error message
   const renderErrorMessage = (name) =>
     name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
+      <div className="error"> {errorMessages.message} </div>
     );
 
   // JSX code for login form
@@ -59,30 +59,29 @@ function App() {
     <div className="form">
       <form onSubmit={handleSubmit}>
         <div className="input-container">
-          <label>Username </label>
-          <input type="text" name="uname" required />
-          {renderErrorMessage("uname")}
-        </div>
+          <label> Username </label> <input type="text" name="uname" required />{" "}
+          {renderErrorMessage("uname")}{" "}
+        </div>{" "}
         <div className="input-container">
-          <label>Password </label>
-          <input type="password" name="pass" required />
-          {renderErrorMessage("pass")}
-        </div>
+          <label> Password </label>{" "}
+          <input type="password" name="pass" required />{" "}
+          {renderErrorMessage("pass")}{" "}
+        </div>{" "}
         <div className="button-container">
           <input type="submit" />
-        </div>
-      </form>
+        </div>{" "}
+      </form>{" "}
     </div>
   );
 
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
-      </div>
+        <div className="title"> Sign In </div>{" "}
+        {isSubmitted ? <div> User is successfully logged in </div> : renderForm}{" "}
+      </div>{" "}
     </div>
   );
 }
 
-export default App;
+export default Login;
