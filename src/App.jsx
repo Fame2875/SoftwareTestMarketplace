@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Item from "../src/Page/item/Item";
 import Login from "../src/Page/Login/Login";
+import Category from "../src/Page/Category/Category"
 import { Link, Route, Routes, Navigate } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/item" element={<Item />} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Navigate to="/item" />} />
+          <Route path ="/category" element = {<Category/>}/>
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </div>
