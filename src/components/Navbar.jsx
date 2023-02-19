@@ -1,6 +1,7 @@
 import React from 'react'
 import { ShoppingCartIcon, UserCircleIcon } from '@heroicons/react/24/outline'
 import { BellAlertIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom'
 
 
 function Navbar() {
@@ -69,7 +70,9 @@ return (
           </button>
         </form>
         <div className="flex flex-row space-x-5">
-          <ShoppingCartIcon class="Icon" />
+           <Link to={`/cart`}>
+              <ShoppingCartIcon class="Icon" />
+           </Link>
           <BellAlertIcon class="Icon" />
           <div className="flex flex-row items-center space-x-2">
             <span className="text3xl font-semibold text-white">User</span>

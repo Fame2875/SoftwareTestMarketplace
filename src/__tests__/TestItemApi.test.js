@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import App from '../App'
 import { fetchData as mockFetchData } from '../utils/api.js'
-
+import Item from '../Page/item/Item'
 jest.mock('../utils/api.js')
 
 test('renders App', async () => {
@@ -15,10 +15,10 @@ test('renders App', async () => {
       },
     ])
   })
-  const { container, debug } = render(<App />)
+  render(<Item />);
 
   expect(mockFetchData).toBeCalledTimes(1)
-  debug(container)
+  // debug(container)
   await waitFor(() => {
     const name = screen.getByText(/test1/i)
     expect(name).toBeInTheDocument()

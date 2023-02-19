@@ -1,5 +1,5 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import Login from "../components/Login/Login";
+import Login from "../Page/Login/Login";
 
 test("Box input show error if valid text", async() => {
             render( < Login onSubmit = {

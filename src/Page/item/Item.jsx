@@ -2,7 +2,7 @@ import React from 'react'
 import { ShoppingCartIcon,PlusSmallIcon,MinusSmallIcon } from '@heroicons/react/24/outline'
 import { fetchData } from '../../utils/api'
 import NewsContainer from '../../components/NewsContainer'
-function Item(props) {
+function Item() {
   // DATA FROM API
   const [data, setData] = React.useState(null)
   const [count,setCount] =React.useState(1)
