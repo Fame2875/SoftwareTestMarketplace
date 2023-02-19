@@ -1,8 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import Cart from '../components/Cart'
+import Bar from '../components/Bar'
+import OrderSummary_page from '../components/OrderSummary_page'
 
 test('Check element header and header table Text show all', () => {
-    render(<Cart />);
+    render(<Bar />);
 
     const Headerh1 = screen.getByRole('heading', { level: 1 })
     expect(Headerh1).toBeInTheDocument()
@@ -21,6 +23,9 @@ test('Check element header and header table Text show all', () => {
 
     const TableHeaderElementTotalPrice = screen.getByTestId('TotalPriceHeader')
     expect(TableHeaderElementTotalPrice).toBeInTheDocument()
+
+    const Headerh5 = screen.getByRole('heading', { level: 5 })
+    expect(Headerh5).toBeInTheDocument()
 });
 
 test('Check element plus-minus button and trash button in Table', () => {
@@ -44,10 +49,7 @@ test('Data in Table', () => {
 })
 
 test('Check element order summary', () => {
-    render(<Cart />);
-
-    const Headerh5 = screen.getByRole('heading', { level: 5 })
-    expect(Headerh5).toBeInTheDocument()
+    render(<OrderSummary_page />);
 
     const Quantity_Element = screen.getByTestId('Ordersummary Quantity')
     expect(Quantity_Element).toBeInTheDocument()
