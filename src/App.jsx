@@ -1,6 +1,4 @@
 import React from "react";
-import NewsContainer from "./NewsContainer";
-import { fetchNews, findNews } from "./api";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Item from "../src/Page/item/Item";
