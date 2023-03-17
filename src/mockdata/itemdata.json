@@ -1,0 +1,18 @@
+[
+    {
+      "productname": "Product A",
+      "productdetail": "This is a detailed description of Product A.",
+      "producttype": 1
+    },
+    {
+      "productname": "Product B",
+      "productdetail": "This is a detailed description of Product B.",
+      "producttype": 2
+    },
+    {
+      "productname": "Product C",
+      "productdetail": "This is a detailed description of Product C.",
+      "producttype": 3
+    }
+  ]
+  

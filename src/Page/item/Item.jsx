@@ -1,7 +1,6 @@
 import React from 'react'
 import { ShoppingCartIcon,PlusSmallIcon,MinusSmallIcon } from '@heroicons/react/24/outline'
-import { fetchData } from '../../utils/api'
-import NewsContainer from '../../components/NewsContainer'
+
 function Item() {
   // DATA FROM API
   const [data, setData] = React.useState(null)
@@ -15,6 +14,9 @@ function Item() {
       <div className="mb-10 flex w-full  text-left">
         {'Home > category 1 > category2 > product namme'}
       </div>
+        <Link to="/category" className="bg-limegreen text-black py-2 px-4 rounded">
+          Go to category
+        </Link>
       <div className="flex flex-row space-x-32 w-full  h-full ">
         <div>
           <img src="https://picsum.photos/700/300 " alt="" />
@@ -76,7 +78,7 @@ function Item() {
           </div>
         </div>
       </div>
-
+                
       <div className="text-left flex flex-row     w-full mt-10">
         <div className=" w-4/6">
           <h1>Product details</h1>
