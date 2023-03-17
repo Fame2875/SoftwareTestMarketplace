@@ -10,7 +10,14 @@ return (
   <>
     <nav class="w-screen   bgmain py-2 px-5 ">
       <div className="flex flex-row justify-between items-center mb-2">
-        <div>LOGO</div>
+        <Link to={`/home`}>
+ 
+        < div 
+        className='cursor-pointer'>
+          LOGO
+          </div>
+             
+          </Link>
 
         <form className="flex items-center justify-center flex-1 ">
           <div className="relative w-1/3 ">
