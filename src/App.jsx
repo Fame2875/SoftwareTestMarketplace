@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Item from "../src/Page/item/Item";
+import Item from "./Page/item/Item";
 import Login from "../src/Page/Login/Login";
 import { Link, Route, Routes, Navigate } from 'react-router-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Cart from "./Page/Cart/Cart";
 import Home from "./Page/home/home";
+import Category from "./Page/Category/Category";
+import Footer from "./components/Footer ";
 
 function App() {
 
@@ -19,9 +21,13 @@ function App() {
         <Routes>
           <Route path="/item" element={<Item />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Navigate to="/item" />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/" element={<Navigate to="/home" />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
+        <Footer />
       </div>
     </div>
      </Router>
