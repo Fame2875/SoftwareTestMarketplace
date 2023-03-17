@@ -1,7 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import Cart from '../components/Cart'
-import Bar from '../components/Bar'
-import OrderSummary_page from '../components/OrderSummary_page'
 
 test('Check element header and header table Text show all', () => {
     render(<Bar />);
