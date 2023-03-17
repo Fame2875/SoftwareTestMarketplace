@@ -1,6 +1,8 @@
 import React from 'react'
 import { ShoppingCartIcon,PlusSmallIcon,MinusSmallIcon } from '@heroicons/react/24/outline'
-
+import { fetchData } from '../../utils/api'
+import { Link } from 'react-router-dom'
+import NewsContainer from "../../components/NewsContainer"
 function Item() {
   // DATA FROM API
   const [data, setData] = React.useState(null)
